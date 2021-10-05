@@ -1,0 +1,25 @@
+<!-- index_bkup.html-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>Insta Cafe</h1>
+  <p class="lead"></p>
+  <h2>Tips Calculator</h2>
+{% block content %}
+    <form action="/" method="post" validate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.from_date.label }}<br>
+            {{ form.from_date(size=32) }}
+        </p>
+        <p>
+            {{ form.to_date.label }}<br>
+            {{ form.to_date(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
+</div>
+{% endblock %}
