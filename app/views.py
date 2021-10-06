@@ -25,6 +25,7 @@ def home():
     revenue = functions.get_revenue_by_date()
     average_check = functions.get_average_check()
     guests = functions.get_guests_by_date()
+    functions.get_tips_1()
     return render_template("index.html", tips=tips, revenue=revenue, average_check=average_check, guests=guests)
 
 
